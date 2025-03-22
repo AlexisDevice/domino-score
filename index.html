@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DominoScore</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="app">
+        <div class="board">
+            <div class="long">
+                <span>Larga</span>
+                <div class="historial" id="h-long" onclick="addScore('long')"></div>
+                <div class="cal">
+                    <span id="total-long">0</span>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="short">
+                <span>Corta</span>
+                <div class="historial" id="h-short" onclick="addScore('short')"></div>
+                <div class="cal">
+                    <span id="total-short">0</span>
+                </div>
+            </div>
+        </div>
+        <div style="display: flex; width: 90%;">
+            <input type="number" id="score-box" placeholder="Ingrese los puntos">
+            <button onclick="resetScore()">reset</button>
+        </div>
+        
+    </div>
+    <script src="./scripts.js"></script>
+</body>
+</html>
