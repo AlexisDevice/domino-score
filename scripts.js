@@ -5,6 +5,8 @@ let tableLong = document.getElementById('h-long');
 let tableShort = document.getElementById('h-short');
 let totalLong = document.getElementById('total-long');
 let totalShort = document.getElementById('total-short');
+let teamLeftName = document.getElementById('team-left');
+let teamRightName = document.getElementById('team-right');
 
 
 let longScore = [];
@@ -12,6 +14,10 @@ let shortScore = [];
 
 if (localStorage.getItem('longScore') != null && localStorage.getItem('shortScore') != null) {
     loadFromLocalStorage();
+}
+
+if (localStorage.getItem('left') != null && localStorage.getItem('right') != null) {
+    loadTeamName();
 }
 
 
@@ -65,6 +71,11 @@ function loadFromLocalStorage() {
     });
 }
 
+function loadTeamName() {
+    teamLeftName.value = window.localStorage.getItem('left');
+    teamRightName.value = window.localStorage.getItem('right');
+}
+
 function resetScore() {
     longScore = [];
     shortScore = [];
@@ -73,4 +84,14 @@ function resetScore() {
     totalLong.textContent = '0';
     totalShort.textContent = '0';
     localStorage.clear();
+}
+
+function saveTeamName(side, teamName) {
+    if (side == 'left') {
+        window.localStorage.setItem('left', teamName);
+    } else if (side == 'right') {
+        window.localStorage.setItem('right', teamName);
+    } else {
+        console.log('Esto no deberia de ocurrir');
+    }
 }

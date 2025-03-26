@@ -10,7 +10,8 @@
     <div class="app">
         <div class="board">
             <div class="long">
-                <span>Larga</span>
+                <input type="text" id="team-left"
+                placeholder="Nombre del team" class="team-name" onchange="saveTeamName('left', this.value)">
                 <div class="historial" id="h-long" onclick="addScore('long')"></div>
                 <div class="cal">
                     <span id="total-long">0</span>
@@ -18,7 +19,8 @@
             </div>
             <div class="divider"></div>
             <div class="short">
-                <span>Corta</span>
+                <input type="text" id="team-right"
+                placeholder="Nombre del team" class="team-name" onchange="saveTeamName('right', this.value)">
                 <div class="historial" id="h-short" onclick="addScore('short')"></div>
                 <div class="cal">
                     <span id="total-short">0</span>

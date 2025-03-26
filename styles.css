@@ -76,13 +76,23 @@ span {
     border-top: 1px solid var(--white-color);
 }
 
+input[type="text"].team-name {
+    width: 100%;
+    height: fit-content;
+    background-color: transparent;
+    color: var(--white-color);
+    outline: none;
+    border: none;
+    font-size: calc(1vw + 1.5vh);
+}
+
 input[type="number"] {
     margin: 5px 0px;
     padding: calc(1vh + 1vw);
     width: 75%;
-    height: calc(2vw + 4vh);
+    height: fit-content;
     font-family: sans-serif;
-    font-size: calc(1vw + 1vh);
+    font-size: calc(1vw + 2vh);
     border-radius: 4px;
     color: var(--white-color);
     background-color: var(--glass-color);
